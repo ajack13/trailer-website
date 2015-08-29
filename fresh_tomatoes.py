@@ -84,6 +84,17 @@ main_page_head = '''
             color:#fff;
             margin:0px;
         }
+        .watch_trailer{
+            color: white;
+            font-weight: bold;
+            position: absolute;
+            font-size: 22px;
+            margin: 20px 0px 0px 0px;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+            background-color: lightslategrey;
+        }
     </style>
     <script type="text/javascript" charset="utf-8">
         // Pause the video when the modal is closed
@@ -106,20 +117,21 @@ main_page_head = '''
             //append html code to the block
             $(this).append('<span class="overlay"><h4 class="desc">'+description+'</h4><br>'+seasonTemplate+'<br>'+
                             '<h3 class="rat"><img width=100 height=60 src="http://www.userlogos.org/files/logos/2690_fernandosantucci/imdb.new_.logo_.png"/> Rating : '+rating+'</h3>'+
-                            '<button class="btn btn-warning trailer_btn">Watch Trailer</button></span>')
+                            '<span class="watch_trailer">Click To Watch Trailer</span></span>')
         });
         //remove overlay on mouseleave
         $(document).on('mouseleave','.hover',function(){
             $('div.hover').find('.overlay').remove();
         });
         //prevent video from playing when clicked on overlay
-        $(document).on('click','.overlay',function(e){
+        $(document).on('click','span.overlay',function(e){
             //e.preventDefault();
             //e.stopPropagation();
+
         });
         // Start playing the video whenever the trailer modal is opened
-        $(document).on('click', '.trailer_btn', function (event) {
-            var trailerYouTubeId = $(this).parent().parent().attr('data-trailer-youtube-id')
+        $(document).on('click', '.overlay', function (event) {
+            var trailerYouTubeId = $(this).parent().attr('data-trailer-youtube-id')
             var sourceUrl = 'http://www.youtube.com/embed/' + trailerYouTubeId + '?autoplay=1&html5=1';
             $("#trailer-video-container").empty().append($("<iframe></iframe>", {
               'id': 'trailer-video',

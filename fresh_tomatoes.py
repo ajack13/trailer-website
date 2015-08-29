@@ -103,7 +103,7 @@ main_page_head = '''
             // reliable way to ensure the video stops playing in IE
             $("#trailer-video-container").empty();
         });
-        //create overlay for ratings discriptions and submit button
+        //create overlay for ratings discriptions watch trailer banner
         $(document).on('mouseenter','.hover',function(){
             //get description and ratings
             var description = $(this).attr('data-description');
@@ -172,7 +172,7 @@ main_page_content = '''
       <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
           <div class="navbar-header">
-            <a class="navbar-brand" href="#">Fresh Tomatoes Movie Trailers</a>
+            <a class="navbar-brand" href="#">Fresh Tomatoes Batman Trailers</a>
           </div>
         </div>
       </div>

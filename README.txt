@@ -10,22 +10,25 @@ A  website with a list of movie and tv series trailers with some of their inform
 Required Libraries and dependencies
 ---------------------------------------------------
 1)Python v2.*
+2)Git (optional)
 
-
-How to run project
+How to download/clone and run project
 ---------------------------------------------------
-Unzip the file 
-navigate to the folder using command promt if you are in windows or the shell if you are using a mac or running linux
-run the file entertainment_center.py using python by typing "python entertainment_center.py" in your shell
-If there are no error messages in your shell then your default web browser will open the movie trailer website in a new tab
+1)	download zip	
+		Unzip the file 
 
+2)	Clone github repository
+	Open the shell in mac/linux or command prompt in windows and navigate to the folder you wnat to clone the repository
+	Make sure you have installed git
+	Type 
+	$ https://github.com/ajack13/trailer-website.git
+	this should clone the repository to the folder
 
-Extra Credit Description
-----------------------------------------------------
-The movie trailer website will have trailers for both movies and tv series 
-The following changes have been made to the fresh_tomatoes.py file  
-	1)Few basic changes to the UI of the website
-	2)Few click and hover events added to the javascript part of the code 
-	3)The movie's ratings and description are shown on hover
-	4)added a new definition get_html_content() is added to carryout the process of extracting the youtube ID from the url 
+How to run program
+---------------------------------------------------
+1)	navigate to the folder using command promt if you are in windows or the shell if you are using a mac or linux
+2)	Run the file entertainment_center.py using python by typing the following command 
+	$ python entertainment_center.py
+3)	If there are no error messages in your shell then your default web browser will open the movie trailer website in a new tab
+
 
